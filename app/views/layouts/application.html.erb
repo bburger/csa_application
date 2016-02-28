@@ -7,6 +7,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<nav class="navbar navbar-default">
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="container-fluid">
+	      <ul class="nav navbar-nav">
+	        <li><%= link_to 'Home', farms_path %></li>
+	        <li><%= link_to 'New Farm', new_farm_path %></li>
+          <li><%= link_to 'New Box', new_box_path %></li>
+	        <!-- <li role="separator" class="divider"></li> -->
+          
+          <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
+          <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+	      </ul>     
+    </div>
+  </div>
+</nav>
 <div class="container">
 <%= yield %>
 </div>
