@@ -26,6 +26,7 @@
   <tbody>
     <% @farms.each do |farm| %>
       <tr>
+        <td><%= image_tag farm.image.url(:thumb) %></td>
         <td><%= farm.name %></td>
         <td><%= farm.address %></td>
         <td><%= farm.city %></td>
