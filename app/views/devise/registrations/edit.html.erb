@@ -21,15 +21,48 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
-
-  <div class="field">
+  
+   <div class="field">
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
 
+  <div class="field">
+    <%= f.text_field :first_name, autofocus: true, placeholder: "First Name" %>
+  </div><br />
+
+  <div class="field">
+    <%= f.text_field :last_name, placeholder: "Last Name" %>
+  </div><br />
+
+  <div class="field">
+    <%= f.text_field :user_name, placeholder: "Desired Username" %>
+  </div><br />
+
+  <div class="field">
+    <%= f.text_field :address, placeholder: "Street Address" %>
+  </div><br />
+
+  <div class="field">
+    <%= f.text_field :city, placeholder: "City" %>
+  </div><br />
+
+  <div class="field">
+    <%= f.text_field :state, placeholder: "State" %>
+  </div><br />
+
+  <div class="field">
+    <%= f.text_field :zip, placeholder: "Zip Code" %>
+  </div><br />
+
+  <div class="field">
+    <%= f.text_field :phone, placeholder: "Phone Number" %>
+  </div><br />
+
   <div class="actions">
     <%= f.submit "Update" %>
   </div>
+
 <% end %>
 
 <h3>Cancel my account</h3>
