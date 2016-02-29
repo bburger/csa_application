@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
+  get 'find_csa/all_boxes'
+  get 'find_csa/all_farms'
+  get 'find_csa/filter_search'
   post 'add_to_cart' => 'cart#add_to_cart'
-
   get 'view_order' => 'cart#view_order'
-
   post 'checkout' => 'cart#checkout'
+  get 'all_boxes' => 'find_csa#all_boxes'
+  get 'all_farms' => 'find_csa#all_farms'
+  get 'filter' => 'find_csa#filter_search'
 
   resources :orders
   resources :line_items
